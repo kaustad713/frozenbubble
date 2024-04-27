@@ -124,10 +124,10 @@ public class FrozenGame extends GameScreen
 		random = new Random(System.currentTimeMillis());
 		
 		background = media.loadImage("background.jpg");
-		bubbles = new Image[8];
-                bubblesBlind = new Image[8];
-		frozenBubbles = new Image[8];
-		for (int i=0 ; i<8 ; i++)
+		bubbles = new Image[9];
+                bubblesBlind = new Image[9];
+		frozenBubbles = new Image[9];
+		for (int i=0 ; i<9 ; i++)
 		{
 			bubbles[i] = media.loadImage("bubble-"+Integer.toString(i+1)+".gif");
                         bubblesBlind[i] = media.loadImage("bubble-colourblind-"+Integer.toString(i+1)+".gif");
@@ -156,7 +156,7 @@ public class FrozenGame extends GameScreen
 		jumping = new Vector();
 		falling = new Vector();
 		
-		bubblePlay = new BubbleSprite[8][13];
+		bubblePlay = new BubbleSprite[9][13];
 		
 		bubbleManager = new BubbleManager(bubbles);
 		levelManager = (LevelManager)gameApplet.getGameContext().getObject("levelManager");
@@ -170,7 +170,7 @@ public class FrozenGame extends GameScreen
 		
 		for (int j=0 ; j<12 ; j++)
 		{
-			for (int i=j%2 ; i<8 ; i++)
+			for (int i=j%2 ; i<9 ; i++)
 			{
 				if (currentLevel[i][j] != -1)
 				{
@@ -328,7 +328,7 @@ public class FrozenGame extends GameScreen
 	{
 		soundManager.playSound(FrozenBubble.SOUND_NEWROOT);
 		
-		for (int i=0 ; i<8 ; i++)
+		for (int i=0 ; i<9 ; i++)
 		{
 			for (int j=0 ; j<12 ; j++)
 			{
@@ -582,7 +582,7 @@ public class FrozenGame extends GameScreen
 					fixedBubbles++;
 					blinkDelay = 0;
 					
-					if (fixedBubbles == 8)
+					if (fixedBubbles == 9)
 					{
 						fixedBubbles = 0;
 						sendBubblesDown();
@@ -620,7 +620,7 @@ public class FrozenGame extends GameScreen
 						fixedBubbles++;
 						blinkDelay = 0;
 						
-						if (fixedBubbles == 8)
+						if (fixedBubbles == 9)
 						{
 							fixedBubbles = 0;
 							sendBubblesDown();

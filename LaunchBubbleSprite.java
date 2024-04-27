@@ -111,20 +111,20 @@ public class LaunchBubbleSprite extends Sprite {
         // prepare sprites
         
         // Retrieve bubbles
-        Image[] bubbles = new Image[8];
-        for (int i=0 ; i<8 ; i++) {
+        Image[] bubbles = new Image[9];
+        for (int i=0 ; i<9 ; i++) {
         	bubbles[i] = media.loadImage("bubble-"+Integer.toString(i+1)+".gif");
         }
         
         
         // Retrieve -colorblind- bubbles
-        Image[] colorblindBubbles = new Image[8];
+        Image[] colorblindBubbles = new Image[9];
         for (int i=0 ; i<8 ; i++) {
         	colorblindBubbles[i] = media.loadImage("bubble-colourblind-"+Integer.toString(i+1)+".gif");
         }
 
         for (int j=0 ; j<41 ; j++) {
-            for (int i=0 ; i<8 ; i++) {
+            for (int i=0 ; i<9 ; i++) {
                 // Clip area
                 gs.setClip(i*32, j*32, 32, 32);
                 gsb.setClip(i*32, j*32, 32, 32);

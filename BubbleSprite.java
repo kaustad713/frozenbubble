@@ -221,7 +221,7 @@ public class BubbleSprite extends Sprite
 					grid[currentPoint.x][currentPoint.y] = null;
 				}
 				
-				for (int i=0 ; i<8 ; i++)
+				for (int i=0 ; i<9 ; i++)
 				{
 					if (grid[i][0] != null)
 					{
@@ -229,7 +229,7 @@ public class BubbleSprite extends Sprite
 					}
 				}
 				
-				for (int i=0 ; i<8 ; i++)
+				for (int i=0 ; i<9 ; i++)
 				{
 					for (int j=0 ; j<12 ; j++)
 					{

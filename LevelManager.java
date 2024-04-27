@@ -89,11 +89,11 @@ public class LevelManager
 
 	private byte[][] getLevel(String data)
 	{
-		byte[][] temp = new byte[8][12];
+		byte[][] temp = new byte[9][12];
 		
 		for (int j=0 ; j<12 ; j++)
 		{
-			for (int i=0 ; i<8 ; i++)
+			for (int i=0 ; i<9 ; i++)
 			{
 				temp[i][j] = -1;
 			}
