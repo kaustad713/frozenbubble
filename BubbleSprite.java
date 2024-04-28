@@ -122,9 +122,9 @@ public class BubbleSprite extends Sprite
 		int posY = (int)Math.floor((realY-28.-frozen.getMoveDown())/28.);
 		int posX = (int)Math.floor((realX-174.)/32. + 0.5*(posY%2));
 		
-		if (posX>7) 
+		if (posX>8) 
 		{
-			posX = 7;
+			posX = 8;
 		}
 		
 		if (posX<0) 
@@ -274,7 +274,7 @@ public class BubbleSprite extends Sprite
 				list.addElement(grid[p.x-1][p.y]);
 			}
 			
-			if (p.x < 7)
+			if (p.x < 8)
 			{
 				list.addElement(grid[p.x+1][p.y]);
 				
@@ -305,7 +305,7 @@ public class BubbleSprite extends Sprite
 		}
 		else
 		{
-			if (p.x < 7)
+			if (p.x < 8)
 			{
 				list.addElement(grid[p.x+1][p.y]);
 			}
